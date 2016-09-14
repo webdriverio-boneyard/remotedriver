@@ -4,6 +4,7 @@
         "syntax-async-functions",
         "transform-regenerator",
         "transform-runtime",
-        "add-module-exports"
+        "add-module-exports",
+        "transform-function-bind"
     ]
 }
