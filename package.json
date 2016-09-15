@@ -26,6 +26,7 @@
     "chrome-remote-interface": "^0.14.3",
     "colors": "^1.1.2",
     "har": "^1.0.0",
+    "node-chrome-runner": "0.0.5",
     "tmp": "0.0.28",
     "ws": "^1.1.1"
   },
