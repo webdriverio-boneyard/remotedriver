@@ -12,7 +12,7 @@ var client = require('webdriverio').remote({
 
 client
     /**
-     * initialise browser, starts Chrome browser, proxy and remote debugger instance
+     * initialise browser, starts Chrome, proxy and remote debugger instance
      */
     .call(browser.start.bind(browser))
     /**
@@ -44,6 +44,5 @@ client
     .call(() => browser.stopCPUProfiling('profile.cpuprofile'))
     /**
      * stop selenium session and kill Chrome
-     * because we attached the session to the browser it can't kill Chrome by itself
      */
     .end().then(() => browser.shutdown())
