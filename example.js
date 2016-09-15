@@ -22,7 +22,7 @@ client
     /**
      * start network profiling
      */
-    .call(browser.recordNetworkLog.bind(browser))
+    .call(() => browser.recordNetworkLog())
     /**
      * open google.com
      */
@@ -31,10 +31,8 @@ client
      * stop network profiling, store HAR file on fs
      * start cpu profiling
      */
-    .call(function () {
-        browser.stopRecordNetworkLog('profile.har')
-        browser.profileCPU()
-    })
+    .call(() => browser.stopRecordNetworkLog('profile.har'))
+    .call(() => browser.profileCPU())
     /**
      * interact with the page
      */
@@ -43,13 +41,9 @@ client
     /**
      * stop profiling and save .cpuprofile file
      */
-    .call(function () {
-        return browser.stopCPUProfiling('profile.cpuprofile')
-    })
+    .call(() => browser.stopCPUProfiling('profile.cpuprofile'))
     /**
      * stop selenium session and kill Chrome
      * because we attached the session to the browser it can't kill Chrome by itself
      */
-    .end().then(function () {
-        browser.shutdown()
-    })
+    .end().then(() => browser.shutdown())
