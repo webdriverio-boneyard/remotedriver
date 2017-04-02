@@ -10,7 +10,14 @@ To set up the project just run
 ```sh
 $ npm install
 ```
-
+If you do not have grunt-cli installed. do
+```sh
+$ npm install -g grunt-cli
+```
+In the root directory of the project run grunt to build the project
+```sh
+$ grunt
+```
 Also when executing the example you need to have a Selenium Standalone server running. You will find the latest jar file [here](http://goo.gl/EUxR76).
 
 ## Demo
